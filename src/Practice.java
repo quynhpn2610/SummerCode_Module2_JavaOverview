@@ -9,6 +9,9 @@ public class Practice {
         int number = Integer.parseInt(sc.nextLine());
         isPrime(number);
 
+        // Print prime < 100
+        printPrime();
+
         // Insert a new value to an array
         System.out.println("Enter a number to insert: ");
         int x = Integer.parseInt(sc.nextLine());
@@ -17,17 +20,16 @@ public class Practice {
         int[] newArray = insertIntoArray(x, index);
         System.out.println(Arrays.toString(newArray));
     }
-    // Check if a number is prime
+
+     //Check if a number is prime
     public static boolean isPrime(int number) {
         if (number == 2) {
             System.out.println(number + " is a prime.");
             return true;
-        }
-        else if (number < 2) {
+        } else if (number < 2) {
             System.out.println(number + " is not a prime.");
             return false;
-        }
-        else { //number > 2
+        } else { //number > 2
             for (int i = 2; i < Math.sqrt(number); i++) {
                 if (number % i == 0) {
                     System.out.println(number + " is not a prime.");
@@ -35,6 +37,27 @@ public class Practice {
                 }
             }
             return true;
+        }
+    }
+
+
+    // Print all prime numbers < 100
+    public static boolean checkPrime(int x) {
+        if(x != 2) {
+            for (int i = 2; i < Math.sqrt(x); i++) {
+                if (x % i == 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    public static void printPrime(){
+        for (int i = 2; i < 101; i++) {
+            if (checkPrime(i)){
+                System.out.println(i);
+            }
+            continue;
         }
     }
 
@@ -54,9 +77,6 @@ public class Practice {
         return myArray;
     }
 
-    public static void sayHello () {
-        System.out.println("Hello World");
-    }
-
 }
+
 
