@@ -1,13 +1,13 @@
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
-public class practice {
+public class Practice {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-//        // Check prime
-//        System.out.println("Enter a number: ");
-//        int number = Integer.parseInt(sc.nextLine());
-//        isPrime(number);
+        // Check prime
+        System.out.println("Enter a number: ");
+        int number = Integer.parseInt(sc.nextLine());
+        isPrime(number);
 
         // Insert a new value to an array
         System.out.println("Enter a number to insert: ");
@@ -17,26 +17,26 @@ public class practice {
         int[] newArray = insertIntoArray(x, index);
         System.out.println(Arrays.toString(newArray));
     }
-//    // Check if a number is prime
-//    public static boolean isPrime(int number) {
-//        if (number == 2) {
-//            System.out.println(number + " is a prime.");
-//            return true;
-//        }
-//        else if (number < 2) {
-//            System.out.println(number + " is not a prime.");
-//            return false;
-//        }
-//        else { //number > 2
-//            for (int i = 2; i < Math.sqrt(number); i++) {
-//                if (number % i == 0) {
-//                    System.out.println(number + " is not a prime.");
-//                    return false;
-//                }
-//            }
-//            return true;
-//        }
-//    }
+    // Check if a number is prime
+    public static boolean isPrime(int number) {
+        if (number == 2) {
+            System.out.println(number + " is a prime.");
+            return true;
+        }
+        else if (number < 2) {
+            System.out.println(number + " is not a prime.");
+            return false;
+        }
+        else { //number > 2
+            for (int i = 2; i < Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    System.out.println(number + " is not a prime.");
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
 
     // Insert a new value to an array
     public static int[] insertIntoArray(int x, int index){
@@ -51,9 +51,11 @@ public class practice {
             }
             myArray[index] = x;
         }
-//        int[] newArray = insertIntoArray(x, index);
-//        System.out.println(newArray.toString());
         return myArray;
+    }
+
+    public static void sayHello () {
+        System.out.println("Hello World");
     }
 
 }
