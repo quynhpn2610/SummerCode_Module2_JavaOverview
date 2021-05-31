@@ -46,10 +46,8 @@ public class practice {
             System.out.println("Cannot insert number");
         }
         else{
-            for (int i = index; i < myArray.length-2; i++) {
-                int temp = myArray[i+1];
-                myArray[i+1] = myArray[i++];
-                myArray[i+1] = temp;
+            for (int i = myArray.length-1; i > index; i--) {
+                myArray[i] = myArray[i-1];
             }
             myArray[index] = x;
         }
