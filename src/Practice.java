@@ -34,15 +34,23 @@ public class Practice {
 //        removeFromArray(x, myArray);
 //        System.out.println(Arrays.toString(myArray));
 
-        // Matrix Generation
-        int[][] myMatrix = matrixFill();
-        // Calculate diagonal elements
-        // int result1 = matrixCalc(myMatrix);
-        // Calculate sum of column elements
-        System.out.println("Enter the column index: ");
-        int colIndex = Integer.parseInt(sc.nextLine());
-        int result2 = matrixCol(myMatrix, colIndex);
-        System.out.println("Result: " + result2);
+//        // Matrix Generation
+//        int[][] myMatrix = matrixFill();
+//        // Calculate diagonal elements
+//        // int result1 = matrixCalc(myMatrix);
+//        // Calculate sum of column elements
+//        System.out.println("Enter the column index: ");
+//        int colIndex = Integer.parseInt(sc.nextLine());
+//        int result2 = matrixCol(myMatrix, colIndex);
+//        System.out.println("Result: " + result2);
+
+        // String element count
+        System.out.println("Enter a string: ");
+        String myString = sc.nextLine().toLowerCase();
+        System.out.println("Enter a character: ");
+        char myChar = sc.nextLine().charAt(0);
+        int count = elementCount(myString, myChar);
+        System.out.println("Count: " + count);
     }
 
 
@@ -165,6 +173,17 @@ public class Practice {
             colSum += anotherMatrix[i][colIndex-1];
         }
         return colSum;
+    }
+
+    // Count string element occurrence
+    public static int elementCount(String myStr, char myChar){
+        int numb = 0;
+        for (int i = 0; i < myStr.length(); i++) {
+            if (myStr.charAt(i) == myChar){
+                numb ++;
+            }
+        }
+        return numb;
     }
 
 
