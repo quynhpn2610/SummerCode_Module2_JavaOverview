@@ -30,11 +30,18 @@ public class Practice {
 //        System.out.println(Arrays.toString(newArray));
 
         // Remove from Array
-        System.out.println("Enter a number to delete: ");
-        int x = Integer.parseInt(sc.nextLine());
-        removeFromArray(x, myArray);
-        System.out.println(Arrays.toString(myArray));
+//        System.out.println("Enter a number to delete: ");
+//        int x = Integer.parseInt(sc.nextLine());
+//        removeFromArray(x, myArray);
+//        System.out.println(Arrays.toString(myArray));
+
+        // Matrix Calculation
+        int[][] myMatrix = matrixFill();
+        int result = matrixCalc(myMatrix);
+        System.out.println("Result: " + result);
     }
+
+
 
      //Check if a number is prime
     public static boolean isPrime(int number) {
@@ -121,7 +128,29 @@ public class Practice {
         }
     }
 
-}
+    // 2D array
+    // Get user to input a 2D array
+    public static int[][] matrixFill(){
+        System.out.println("Enter the matrix elements: ");
+        Scanner newSc = new Scanner(System.in);
+        int[][] aMatrix = new int[2][2];
+        for (int row = 0; row < 2; row++) {
+            for (int col = 0; col < 2; col++) {
+                aMatrix[row][col] = Integer.parseInt(newSc.nextLine());
+            }
+        }
+        return aMatrix;
+    }
+    // Calculate the diagonal elements
+    public static int matrixCalc(int[][] someMatrix){
+        int sum = 0;
+        for (int i = 0; i < someMatrix.length; i++) {
+                sum += someMatrix[i][i];
+            }
+        return sum;
+        }
+    }
+
 
 
 
