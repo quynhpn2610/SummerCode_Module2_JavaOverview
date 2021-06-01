@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Practice {
+    private static int[] myArray = {10, 4, 6, 7, 8, 0, 0, 0, 0, 0};
     // Main
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -14,10 +15,10 @@ public class Practice {
 //        printPrime();
 //
         // Print first n prime
-        System.out.println("Enter the number of prime numbers you want to print: ");
-        int numb = Integer.parseInt(sc.nextLine());
-        int[] results = printPrime2(numb);
-        System.out.println(Arrays.toString(results));
+//        System.out.println("Enter the number of prime numbers you want to print: ");
+//        int numb = Integer.parseInt(sc.nextLine());
+//        int[] results = printPrime2(numb);
+//        System.out.println(Arrays.toString(results));
 
 
 //        // Insert a new value to an array
@@ -27,6 +28,12 @@ public class Practice {
 //        int index = Integer.parseInt(sc.nextLine());
 //        int[] newArray = insertIntoArray(x, index);
 //        System.out.println(Arrays.toString(newArray));
+
+        // Remove from Array
+        System.out.println("Enter a number to delete: ");
+        int x = Integer.parseInt(sc.nextLine());
+        removeFromArray(x, myArray);
+        System.out.println(Arrays.toString(myArray));
     }
 
      //Check if a number is prime
@@ -87,7 +94,7 @@ public class Practice {
 
     // Insert a new value to an array
     public static int[] insertIntoArray(int x, int index){
-        int[] myArray = {10, 4, 6, 7, 8, 0, 0, 0, 0, 0};
+        // int[] myArray = {10, 4, 6, 7, 8, 0, 0, 0, 0, 0};
         // {10, 4, 32, 6, 7, 8, 0, 0, 0, 0}
         if (index <= 0 && index >= myArray.length-1){
             System.out.println("Cannot insert number");
@@ -101,6 +108,20 @@ public class Practice {
         return myArray;
     }
 
+    // Remove from array
+    public static void removeFromArray(int x, int[] someArray){
+        int index_del = 0;
+        for (int i = 0; i < someArray.length; i++) {
+            if (someArray[i] == x) {
+                index_del = i;
+                for (int j = index_del; j < someArray.length-1; j++) {
+                    someArray[j] = someArray[j+1];
+                }
+            }
+        }
+    }
+
 }
+
 
 
