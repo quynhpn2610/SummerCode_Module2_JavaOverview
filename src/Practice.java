@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Practice {
@@ -14,8 +13,7 @@ public class Practice {
 //
 //        // Print prime < 100
 //        printPrime();
-//
-        // Print first n prime
+//        // Print first n prime
 //        System.out.println("Enter the number of prime numbers you want to print: ");
 //        int numb = Integer.parseInt(sc.nextLine());
 //        int[] results = printPrime2(numb);
@@ -30,7 +28,7 @@ public class Practice {
 //        int[] newArray = insertIntoArray(x, index);
 //        System.out.println(Arrays.toString(newArray));
 
-        // Remove from Array
+//        // Remove from Array
 //        System.out.println("Enter a number to delete: ");
 //        int x = Integer.parseInt(sc.nextLine());
 //        removeFromArray(x, myArray);
