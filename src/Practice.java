@@ -7,59 +7,61 @@ public class Practice {
     // Main
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-//        // Check prime
-//        System.out.println("Enter a number: ");
-//        int number = Integer.parseInt(sc.nextLine());
-//        isPrime(number);
-//
-//        // Print prime < 100
-//        printPrime();
-//        // Print first n prime
-//        System.out.println("Enter the number of prime numbers you want to print: ");
-//        int numb = Integer.parseInt(sc.nextLine());
-//        int[] results = printPrime2(numb);
-//        System.out.println(Arrays.toString(results));
+        // Check prime
+        System.out.println("Enter a number: ");
+        int number = Integer.parseInt(sc.nextLine());
+        isPrime(number);
+
+        // Print prime < 100
+        printPrime();
+        // Print first n prime
+        System.out.println("Enter the number of prime numbers you want to print: ");
+        int numb = Integer.parseInt(sc.nextLine());
+        int[] results = printPrime2(numb);
+        System.out.println(Arrays.toString(results));
 
 
-//        // Insert a new value to an array
-//        System.out.println("Enter a number to insert: ");
-//        int x = Integer.parseInt(sc.nextLine());
-//        System.out.println("Enter the index: ");
-//        int index = Integer.parseInt(sc.nextLine());
-//        int[] newArray = insertIntoArray(x, index);
-//        System.out.println(Arrays.toString(newArray));
+        // Insert a new value to an array
+        System.out.println("Enter a number to insert: ");
+        int x = Integer.parseInt(sc.nextLine());
+        System.out.println("Enter the index: ");
+        int index = Integer.parseInt(sc.nextLine());
+        int[] newArray = insertIntoArray(x, index);
+        System.out.println(Arrays.toString(newArray));
 
-//        // Remove from Array
-//        System.out.println("Enter a number to delete: ");
-//        int x = Integer.parseInt(sc.nextLine());
-//        removeFromArray(x, myArray);
-//        System.out.println(Arrays.toString(myArray));
+        // Remove from Array
+        System.out.println("Enter a number to delete: ");
+        int x1 = Integer.parseInt(sc.nextLine());
+        removeFromArray(x1, myArray);
+        System.out.println(Arrays.toString(myArray));
 
-//        // Matrix Generation
-//        int[][] myMatrix = matrixFill();
-//        // Calculate diagonal elements
-//        // int result1 = matrixCalc(myMatrix);
-//        // Calculate sum of column elements
-//        System.out.println("Enter the column index: ");
-//        int colIndex = Integer.parseInt(sc.nextLine());
-//        int result2 = matrixCol(myMatrix, colIndex);
-//        System.out.println("Result: " + result2);
+        // Matrix Generation
+        int[][] myMatrix = matrixFill();
+        // Calculate diagonal elements
+        int result1 = matrixCalc(myMatrix);
+        System.out.println("Result: " + result1);
+        // Calculate sum of column elements
+        System.out.println("Enter the column index: ");
+        int colIndex = Integer.parseInt(sc.nextLine());
+        int result2 = matrixCol(myMatrix, colIndex);
+        System.out.println("Result: " + result2);
 
-//        // String element count
-//        System.out.println("Enter a string: ");
-//        String myString = sc.nextLine().toLowerCase();
-//        System.out.println("Enter a character: ");
-//        char myChar = sc.nextLine().charAt(0);
-//        int count = elementCount(myString, myChar);
-//        System.out.println("Count: " + count);
+        // String element count
+        System.out.println("Enter a string: ");
+        String myString = sc.nextLine().toLowerCase();
+        System.out.println("Enter a character: ");
+        char myChar = sc.nextLine().charAt(0);
+        int count = elementCount(myString, myChar);
+        System.out.println("Count: " + count);
 
         // Reverse the array
         int[] anArray = createArray();
         System.out.println(Arrays.toString(anArray));
-        int[] newArray = arrayReverse(anArray);
-        System.out.println(Arrays.toString(newArray));
+        int[] myNewArray = arrayReverse(anArray);
+        System.out.println(Arrays.toString(myNewArray));
     }
 
+    // Functions
 
     //Check if a number is prime
     public static boolean isPrime(int number) {
