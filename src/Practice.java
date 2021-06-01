@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Practice {
@@ -44,13 +45,19 @@ public class Practice {
 //        int result2 = matrixCol(myMatrix, colIndex);
 //        System.out.println("Result: " + result2);
 
-        // String element count
-        System.out.println("Enter a string: ");
-        String myString = sc.nextLine().toLowerCase();
-        System.out.println("Enter a character: ");
-        char myChar = sc.nextLine().charAt(0);
-        int count = elementCount(myString, myChar);
-        System.out.println("Count: " + count);
+//        // String element count
+//        System.out.println("Enter a string: ");
+//        String myString = sc.nextLine().toLowerCase();
+//        System.out.println("Enter a character: ");
+//        char myChar = sc.nextLine().charAt(0);
+//        int count = elementCount(myString, myChar);
+//        System.out.println("Count: " + count);
+
+        // Reverse the array
+        int[] anArray = createArray();
+        System.out.println(Arrays.toString(anArray));
+        int[] newArray = arrayReverse(anArray);
+        System.out.println(Arrays.toString(newArray));
     }
 
 
@@ -186,6 +193,37 @@ public class Practice {
         return numb;
     }
 
+    // Create an array using user input
+    public static int[] createArray() {
+        Scanner sc = new Scanner(System.in);
+        int size;
+        do {
+            System.out.println("Enter the size of your array: ");
+            size = Integer.parseInt(sc.nextLine());
+            if (size > 20){
+                System.out.println("Size cannot exceed 20. Please enter again.");
+            }
+        } while (size > 20);
+
+        int[] array = new int[size];
+        int i = 0;
+        while (i< array.length){
+            System.out.println("Enter array element " + (i+1) + ": ");
+            array[i] = Integer.parseInt(sc.nextLine());
+            i++;
+        }
+        return array;
+    }
+
+    // Reverse an array
+    public static int[] arrayReverse(int[] array){
+        for (int i = 0; i < array.length/2; i++) {
+            int temp = array[i];
+            array[i] = array[array.length-1-i];
+            array[array.length - 1 - i] = temp;
+        }
+        return array;
+    }
 
 }
 
